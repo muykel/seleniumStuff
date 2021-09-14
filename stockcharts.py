@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 
-
 ticker = input("Enter Ticker: ").upper()
 driver = webdriver.Chrome()
 dropdownSelect = "Full Stochastics"

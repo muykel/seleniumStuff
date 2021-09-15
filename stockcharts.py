@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import Select
 ticker = input("Enter Ticker: ").upper()
 driver = webdriver.Chrome()
 dropdownSelect = "Full Stochastics"
+driver.maximize_window()
 driver.get(f"https://stockcharts.com/h-sc/ui?s={ticker}")
 
 # assert ticker in driver.title

@@ -2,10 +2,12 @@
 
 from selenium import webdriver
 import pyautogui as pyg
+import keyboard
 import time
 
 def checkOneName(name):
-    pyg.write(name)
+    # pyg.write(name)
+    keyboard.write(name) # both keyboard and pyg don't fucking work fuck you
     time.sleep(0.3)
     pyg.press("enter")
     time.sleep(0.3)
@@ -20,7 +22,7 @@ with open("usernames.txt") as f:
 
     arr = list(map(lambda x: x.strip("\n"), arr))
 
-    passwordInput = "8kfNTRfbrFDf88cM$" # password used
+    passwordInput = "$" # password used
 
     driver = webdriver.Chrome()
     driver.get("https://account.protonmail.com/signup?language=en")

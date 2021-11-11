@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "839c0aaf939a3c186299335e4e84cadac734ff692d6915f9b613ebc43f1bba45"
+            "sha256": "2a80ae253b8405b69778fb95bf66d9935de780b392405f9b4b4b58d0fad1aca0"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -134,6 +134,14 @@
             ],
             "version": "==3.3"
         },
+        "keyboard": {
+            "hashes": [
+                "sha256:63ed83305955939ca5c9a73755e5cc43e8242263f5ad5fd3bb7e0b032f3d308b",
+                "sha256:8e9c2422f1217e0bd84489b9ecd361027cc78415828f4fe4f88dd4acd587947b"
+            ],
+            "index": "pypi",
+            "version": "==0.13.5"
+        },
         "mouseinfo": {
             "hashes": [
                 "sha256:2c62fb8885062b8e520a3cce0a297c657adcc08c60952eb05bc8256ef6f7f6e7"
@@ -179,7 +187,7 @@
                 "sha256:322b07420f91b2dd7f624823e53046b922cab4aad28baab01a62463728b7e0c5",
                 "sha256:8a42710a73e6a7e4c332619aa3ea6d9981edadefafe4492f295c10fb7f14c4d2"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "sys_platform == 'darwin'",
             "version": "==7.3"
         },
         "pyobjc-core": {

@@ -5,9 +5,13 @@ import pyautogui as pyg
 import time
 
 def checkOneName(name):
-    pyg.press("tab")
-    # usernameField.send_keys(name)
-    # nextButton.click()
+    pyg.write(name)
+    time.sleep(0.3)
+    pyg.press("enter")
+    time.sleep(0.3)
+    pyg.hotkey('command', 'a')
+    time.sleep(0.3)
+    pyg.press("backspace")
 
 with open("usernames.txt") as f:
     arr = []
@@ -19,21 +23,20 @@ with open("usernames.txt") as f:
     passwordInput = "8kfNTRfbrFDf88cM$" # password used
 
     driver = webdriver.Chrome()
-    # driver.maximize_window()
     driver.get("https://account.protonmail.com/signup?language=en")
-    time.sleep(8)
+    time.sleep(5)
 
     # defining the fields on the website
-    usernameField = driver.find_element_by_xpath('//*[@id="username"]')
     passwordField = driver.find_element_by_xpath('//*[@id="password"]')
     passwordFieldRepeat = driver.find_element_by_xpath('//*[@id="repeat-password"]')
-    nextButton = driver.find_element_by_xpath('/html/body/div[1]/div[3]/div/div/main/div[2]/form/button')
 
     # the password field doesn't get reset after a failed attempt
     passwordField.send_keys(passwordInput)
     passwordFieldRepeat.send_keys(passwordInput)
 
+    for i in range(10):
+        pyg.press("tab")
+
     for val in arr:
         checkOneName(val)
-        print(val)
-        time.sleep(0.5)
+        time.sleep(2)
